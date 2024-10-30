@@ -68,6 +68,10 @@ sources:
             description: si la source est payante ou non 
           - name: campaign_key
             description: la cle unique
+            Tests:
+              - unique
+              - NOT NULL
+              
           - name: camPGN_name
             description: le nom de la campagne
           - name: ads_cost
@@ -87,6 +91,9 @@ sources:
             description: si la source est payante ou non 
           - name: campaign_key
             description: la cle unique
+            Tests:
+              - unique
+              - NOT NULL
           - name: camPGN_name
             description: le nom de la campagne
           - name: ads_cost
@@ -106,6 +113,9 @@ sources:
             description: si la source est payante ou non 
           - name: campaign_key
             description: la cle unique
+            Tests:
+              - unique
+              - NOT NULL
           - name: camPGN_name
             description: le nom de la campagne
           - name: ads_cost
@@ -125,6 +135,9 @@ sources:
             description: si la source est payante ou non 
           - name: campaign_key
             description: la cle unique
+            Tests:
+              - unique
+              - NOT NULL
           - name: camPGN_name
             description: le nom de la campagne
           - name: ads_cost
