@@ -58,6 +58,82 @@ sources:
             description: coûts logistiques
           - name: ship_cost
             description: coûts de transport
+      - name: facebook
+        identifier: raw_gz_facebook
+        description: table facebook
+        columns:
+          - name: date_date
+            description: date de la campagne
+          - name: paid_source
+            description: si la source est payante ou non 
+          - name: campaign_key
+            description: la cle unique
+          - name: camPGN_name
+            description: le nom de la campagne
+          - name: ads_cost
+            description: le prix de la pub
+          - name: impression
+            description: le nombre d impression genere
+          - name: click
+            description: le nombre de click 
+
+      - name: criteo
+        identifier: raw_gz_criteo
+        description: table criteo
+        columns:
+          - name: date_date
+            description: date de la campagne
+          - name: paid_source
+            description: si la source est payante ou non 
+          - name: campaign_key
+            description: la cle unique
+          - name: camPGN_name
+            description: le nom de la campagne
+          - name: ads_cost
+            description: le prix de la pub
+          - name: impression
+            description: le nombre d impression genere
+          - name: click
+            description: le nombre de click 
+
+      - name: bing
+        identifier: raw_gz_bing
+        description: table bing
+        columns:
+          - name: date_date
+            description: date de la campagne
+          - name: paid_source
+            description: si la source est payante ou non 
+          - name: campaign_key
+            description: la cle unique
+          - name: camPGN_name
+            description: le nom de la campagne
+          - name: ads_cost
+            description: le prix de la pub
+          - name: impression
+            description: le nombre d impression genere
+          - name: click
+            description: le nombre de click 
+
+      - name: adwords
+        identifier: raw_gz_adwords
+        description: table adwords
+        columns:
+          - name: date_date
+            description: date de la campagne
+          - name: paid_source
+            description: si la source est payante ou non 
+          - name: campaign_key
+            description: la cle unique
+          - name: camPGN_name
+            description: le nom de la campagne
+          - name: ads_cost
+            description: le prix de la pub
+          - name: impression
+            description: le nombre d impression genere
+          - name: click
+            description: le nombre de click 
+
 
 
 models: 
@@ -100,5 +176,4 @@ models:
         description: coûts de logistique
       - name: ship_cost
         description: coûts d'expédition
-            
-               
+   
