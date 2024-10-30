@@ -189,4 +189,13 @@ models:
         description: coûts de logistique
       - name: ship_cost
         description: coûts d'expédition
-   
+  - name: int_campaigns_days
+    columns: 
+      - name: date_date
+        tests:
+          - unique
+          - not_null
+      - name: ads_cost
+      - name: ads_impression
+      - name: ads_clicks
+
