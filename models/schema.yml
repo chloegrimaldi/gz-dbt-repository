@@ -5,7 +5,52 @@ sources:
     tables:
       - name: sales
         identifier: raw_gz_sales
+        description: table sales 
+        columns:
+          - name: date_date
+            description: date de la vente
+          - name: orders_id
+            description: id de la vente valeur unique
+          - name: pdt_id
+            description: id du produit non unique
+          - name: revenue
+            description: revenue genere par les ventes
+          - name: quantity
+            description: quantite de produits vendu 
+        loaded_at_field: "CAST(date_date as timestamp)"
+        freshness:
+          warn_after: {count: 90, period: day}
+        tests:
+          - unique: 
+              column_name: "(orders_id||'-'||pdt_id)"
+              
+            
+          
       - name: products
         identifier: raw_gz_product
+        description: products table 
+        columns:
+          - name: products_id
+            description: identifiant unique du produit
+            tests:
+              - unique
+          - name: purchase_price
+            description: le prix du produit
+            
+
       - name: ship
         identifier: raw_gz_ship
+        description: ship information 
+        columns:
+          - name: orders_id
+            description: numero de l order
+            tests:
+              - unique 
+          - name: shipping_fee
+            description: cout de l'envoie
+          - name: logcost
+            description: cout logistique
+          - name: ship_cost_1
+            description: cout de l envoie autre
+            
+               
